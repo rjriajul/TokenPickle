@@ -33,7 +33,7 @@ termux-setup-storage
 Copy the file into the project folder:
 
 ```bash
-cd sdcard
+cd /sdcard
 cp credentials.json /data/data/com.termux/files/home/TokenPickle
 ```
 
