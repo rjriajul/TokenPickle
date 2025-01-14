@@ -33,7 +33,7 @@ termux-setup-storage
 Copy the file into the project folder:
 
 ```bash
-cd /sdcard
+cd sdcard
 cp credentials.json /data/data/com.termux/files/home/TokenPickle
 ```
 
@@ -41,7 +41,7 @@ cp credentials.json /data/data/com.termux/files/home/TokenPickle
 Navigate to the project folder and run the script:
 
 ```bash
-cd ~/TokenPickle
+cd TokenPickle
 python3 generate_token.py
 ```
 
@@ -59,3 +59,8 @@ cp token.pickle /sdcard
 
 ## Done! 🎉  
 You’ll find `token.pickle` in your phone’s internal storage.  
+
+
+## Credit
+
+[`SilentDemonSD`](https://github.com/SilentDemonSD)
