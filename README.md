@@ -13,7 +13,7 @@ Download and install [Termux](https://github.com/termux/termux-app/releases).
 Open Termux and run this command to update, install necessary packages, and set up Python:
 
 ```bash
-sudo apt update && sudo apt upgrade -y && sudo apt install git python3 python3-pip -y && python3 -m pip install --upgrade pip && pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
+apt update && apt upgrade -y && apt install git python3 python3-pip -y && python3 -m pip install --upgrade pip && pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
 
 ### 3. Clone the Repository  
