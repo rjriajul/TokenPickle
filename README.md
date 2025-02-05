@@ -16,39 +16,44 @@ Open Termux and run this command to update, install necessary packages, and set 
 pkg update && pkg upgrade -y && pkg install git python python-pip -y && python -m pip install --upgrade pip && pip install google-api-python-client google-auth-httplib2 google-auth-oauthlib
 ```
 
-### 3. Clone the Repository  
-Run the following to clone the `TokenPickle` repository:
-
-```bash
-git clone https://github.com/RjRiajul/TokenPickle
-```
-
-### 4. Add `credentials.json`  
-Move the `credentials.json` file to your phone’s internal storage (not an SD card). Then, give Termux storage access:
+### 2. Clone the Repository (Directly in internal Storage)
+First, Give Termux storage access:
 
 ```bash
 termux-setup-storage
 ```
 
-Copy the file into the project folder:
+Now nevigate to the Internal Storage:
 
 ```bash
 cd /sdcard
-cp credentials.json /data/data/com.termux/files/home/TokenPickle
 ```
 
-### 5. Generate the Token  
+Run the following to clone the `TokenPickle` repository:
+
+```bash
+git clone https://github.com/rjriajul/TokenPickle
+cd TokenPickle
+```
+
+### 3. Add `credentials.json`  
+
+Then Move the `credentials.json` file to your phone’s internal storage.
+```bash
+cp /sdcard/credentials.json /data/data/com.termux/files/home/TokenPickle
+```
+
+### 4. Generate the Token  
 Navigate to the project folder and run the script:
 
 ```bash
-cd TokenPickle
 python3 generate_token.py
 ```
 
 Copy the URL displayed, open it in a browser, and log in to your Google account. After successful authentication, you’ll see the message:  
 **“The authentication flow has completed. You may close this window.”**
 
-### 6. Save `token.pickle`  
+### 5. Save `token.pickle`  
 Copy the generated token to your phone's storage:
 
 ```bash
